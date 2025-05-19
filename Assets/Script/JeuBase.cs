@@ -10,6 +10,8 @@ public class JeuBase : MonoBehaviour
 {
 
     public static JeuBase instance;
+    public TextMeshProUGUI nomjoueur;
+    
     
     void Awake()
     {
