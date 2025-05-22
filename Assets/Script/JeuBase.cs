@@ -11,8 +11,12 @@ public class JeuBase : MonoBehaviour
 
     public static JeuBase instance;
     public TextMeshProUGUI nomjoueur;
-    
-    
+    public TextMeshProUGUI niveau;
+    public TextMeshProUGUI timer;
+    public TextMeshProUGUI points;
+    public TextMeshProUGUI bouteillesNBR;
+
+
     void Awake()
     {
        
@@ -29,5 +33,23 @@ public class JeuBase : MonoBehaviour
             
             Destroy(gameObject);
         }
+
+        points.text =  0 + " Points";
+        bouteillesNBR.text = 0 + "";
     }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            niveau.text = "Intérieur de la Maison";
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            niveau.text = "Extérieur de la Maison";
+        }
+    }
+
+    
 }

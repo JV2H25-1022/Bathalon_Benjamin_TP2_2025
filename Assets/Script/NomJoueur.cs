@@ -6,12 +6,15 @@ using UnityEngine;
 public class NomJoueur : MonoBehaviour
 {
 
-    public TextMeshProUGUI nomfinal;
     public TextMeshProUGUI nomchoix;
+    public TextMeshProUGUI nomfinal;
+    
     // Start is called before the first frame update
    public void ValiderNom(string nouveauNom)
     {
-        PlayerPrefs.SetString("nomChoix", nouveauNom);
+        PlayerPrefs.SetString("nomPris", nouveauNom);
+
         nomfinal.text = nouveauNom;
+        Debug.Log(PlayerPrefs.GetString("nomPris"));
     }
 }
