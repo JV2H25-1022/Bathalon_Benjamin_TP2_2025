@@ -6,16 +6,17 @@ using UnityEngine.AI;
 public class AgentAutonome : MonoBehaviour
 {
     public Transform cible;
-    private NavMeshAgent _agent;
+    public NavMeshAgent agent;
+    public RetireTrash Score;
 
     void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _agent.SetDestination(cible.position);
+        agent.SetDestination(cible.position);
     }
 }
