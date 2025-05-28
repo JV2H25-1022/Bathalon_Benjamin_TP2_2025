@@ -11,6 +11,8 @@ TagManager:
   - door
   - keyII
   - doorII
+  - grass
+  - pot
   layers:
   - Default
   - TransparentFX

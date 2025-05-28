@@ -10,6 +10,7 @@ public class FinNiveauUn : MonoBehaviour
     public GameObject trashDeux;
     public GameObject keyed;
     public GameObject endDoor;
+    public GameObject lawmmower;
     // Start is called before the first frame update
 
     void OnTriggerEnter(Collider other)
@@ -21,6 +22,7 @@ public class FinNiveauUn : MonoBehaviour
             trashDeux.SetActive(true);
             keyed.SetActive(true);
             endDoor.SetActive(true);
+            lawmmower.SetActive(true);
         }
         Debug.Log("Bonk");
     }
