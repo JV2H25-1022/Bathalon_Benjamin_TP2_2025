@@ -10,10 +10,12 @@ public class FinNiveauDeux : MonoBehaviour
     public GameObject UIFull;
     public GameObject joueur;
     public GameObject CanvasFin;
+    public AudioSource endSound;
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            endSound.Play();  
             SceneManager.LoadScene(3);
             UIFull.SetActive(false);
             joueur.SetActive(false);

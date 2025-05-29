@@ -13,6 +13,7 @@ public class RetireTrash : MonoBehaviour
     public JeuBase Pointage;
     public JeuBase bouteilles;
     public ObtentionCan Grabbed;
+    public AudioSource sound;
 
 
 
@@ -35,6 +36,7 @@ public class RetireTrash : MonoBehaviour
             Debug.Log("Grabbed");
             Pointage.points.text = Score.ToString() + " Points";
             bouteilles.bouteillesNBR.text = Grabbed.Yoinked.ToString();
+            sound.Play();
 
         }
         Debug.Log("Touched");

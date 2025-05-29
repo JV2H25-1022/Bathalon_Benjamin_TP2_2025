@@ -10,12 +10,13 @@ public class PertePoints : MonoBehaviour
     public RetireTrash Scoring;
     public AgentAutonome Bot;
     public AgentAutonome Target;
+    public AudioSource HitSound;
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Scoring.Score -= 2;
-       
+            HitSound.Play();
             Invoke("On", 0f);
             Invoke("Off", 2f);
 

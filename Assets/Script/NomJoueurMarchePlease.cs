@@ -10,10 +10,12 @@ public class NomJoueurMarchePlease : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshProUGUI nompick;
+    public TextMeshProUGUI marche;
 
     public void Start()
     {
         nompick.text = PlayerPrefs.GetString("nomPris");
+        marche.text = PlayerPrefs.GetString("nomPris");
         Debug.Log(PlayerPrefs.GetString("nomPris"));
     }
 }

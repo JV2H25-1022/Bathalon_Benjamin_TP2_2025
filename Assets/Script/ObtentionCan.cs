@@ -11,6 +11,7 @@ public class ObtentionCan : MonoBehaviour
     public GameObject _Can;
     public float Yoinked;
     public JeuBase bouteilles;
+    public AudioSource play;
 
 
 
@@ -30,6 +31,7 @@ public class ObtentionCan : MonoBehaviour
             Yoinked += 1;
             other.gameObject.SetActive(false);
             Debug.Log("Grabbed");
+            play.Play();
 
         }
         Debug.Log("Touched");

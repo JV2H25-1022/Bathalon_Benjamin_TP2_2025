@@ -7,6 +7,7 @@ public class GrassCollect : MonoBehaviour
 {
     public GameObject GrassUI;
     public GameObject actualGrass;
+    public AudioSource collect;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +17,7 @@ public class GrassCollect : MonoBehaviour
                 GrassUI.SetActive(true);
                 actualGrass.SetActive(false);
                 Debug.Log("Activation");
+                collect.Play();
             }
             Debug.Log("Le Script de Grass passe");
         }

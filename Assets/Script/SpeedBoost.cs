@@ -10,6 +10,7 @@ public class SpeedBoost : MonoBehaviour
     public ThirdPersonController sprint;
     public GrassCollect UI;
     public GameObject grassDrop;
+    public AudioSource SpeedUp;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +19,7 @@ public class SpeedBoost : MonoBehaviour
             {
                 if(UI.GrassUI.activeSelf == true)
                 {
+                    SpeedUp.Play();
                     grassDrop.SetActive(true);
                     UI.GrassUI.SetActive(false);
                     walk.MoveSpeed = 3.5f;
